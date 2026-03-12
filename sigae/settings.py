@@ -37,13 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
-
-LOCAL_APPS = [
     'apps.alunos',
-    # 'apps.perfil_ivs',
-    # 'apps.editais',
-    # 'apps.inscricoes',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +83,8 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
+
+AUTH_USER_MODEL = 'alunos.Aluno'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
