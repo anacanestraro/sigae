@@ -12,6 +12,10 @@ class Aluno(AbstractUser):
         blank=True,
         verbose_name='Data de Nascimento'
     )
+    email = models.EmailField(
+        unique=True,
+        verbose_name='E-mail'
+    )
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'cpf']
