@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.alunos',
+    'apps.perfil_ivs',
 ]
 
 MIDDLEWARE = [
