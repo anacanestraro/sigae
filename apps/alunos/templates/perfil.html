@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bg-white rounded shadow p-6">
+  <h2 class="text-xl font-bold text-blue-900 mb-4">Meu Perfil</h2>
+
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <p class="text-sm text-gray-500">Nome</p>
+      <p class="font-medium">{{ aluno.get_full_name }}</p>
+    </div>
+    <div>
+      <p class="text-sm text-gray-500">Matrícula</p>
+      <p class="font-medium">{{ aluno.matricula }}</p>
+    </div>
+    <div>
+      <p class="text-sm text-gray-500">E-mail</p>
+      <p class="font-medium">{{ aluno.email }}</p>
+    </div>
+    <div>
+      <p class="text-sm text-gray-500">Curso</p>
+      <p class="font-medium">{{ aluno.curso }}</p>
+    </div>
+  </div>
+
+  <a href="{% url 'alunos:editar' %}"
+     class="mt-6 inline-block bg-blue-900 text-white px-4 py-2 rounded">
+    Editar perfil
+  </a>
+</div>
+{% endblock %}
