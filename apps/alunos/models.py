@@ -25,7 +25,7 @@ class Aluno(AbstractUser):
         verbose_name_plural = 'Alunos'
 
     def __str__(self):
-        return f'{self.get_full_name()} ({self.matricula})'
+        return self.get_full_name() or self.email
 
     @property
     def perfil_completo(self):
